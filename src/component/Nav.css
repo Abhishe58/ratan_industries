@@ -1,0 +1,112 @@
+.Navcontainer {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dfdfdf;
+  z-index: 1;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+}
+.NavxCon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.logo {
+  height: 40px;
+  width: 40px;
+}
+.Navsuba {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+}
+.Navsuba h1 {
+  font-size: 21px;
+}
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.Navlink {
+  padding: 10px 10px;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 1s;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.Navlink:hover {
+  color: slateblue;
+}
+.CtaBut {
+  padding: 10px 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 1s;
+  white-space: nowrap;
+}
+.CtaBut:hover {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+.CtaButb {
+  padding: 10px 10px;
+  background-color: slateblue;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  transition: 1s;
+  white-space: nowrap;
+}
+.CtaButb:hover {
+  background-color: rgba(105, 90, 205, 0.863);
+}
+.navIco {
+  display: none;
+}
+@media (max-width: 1238px) {
+  .navIco {
+    display: block;
+    font-size: 23px;
+    cursor: pointer;
+  }
+  .onav {
+    display: block;
+  }
+  .cnav {
+    display: none;
+  }
+  nav {
+    padding: 10px;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: white;
+  }
+  .CtaButb {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 1238px) {
+  .Navcontainer {
+    height: max-content;
+  }
+}

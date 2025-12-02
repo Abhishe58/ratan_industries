@@ -1,0 +1,396 @@
+.Herosection {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 10px;
+  padding-top: 60px;
+  display: flex;
+  gap: 10px;
+}
+.Herosubcona {
+  position: relative;
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.Herosubcona h1 {
+  font-size: 50px;
+}
+.Herosubconb {
+  position: relative;
+  padding: 10px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.HerosecImg {
+  height: 450px;
+  width: 450px;
+  border-radius: 10px;
+}
+/* .Herosubconb::before {
+  content: " ";
+  position: absolute;
+  height: 450px;
+  width: 450px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px slateblue, 0px 0px 20px slateblue;
+  animation: colora 7s linear infinite;
+} */
+/* @keyframes colora {
+  0% {
+    box-shadow: 0px 0px 10px slateblue, 0px 0px 20px slateblue,
+      0px 0px 30px slateblue;
+  }
+  50% {
+    box-shadow: 0px 0px 10px #ff009d, 0px 0px 20px #ff009d, 0px 0px 30px #ff009d;
+  }
+  100% {
+    box-shadow: 0px 0px 10px red, 0px 0px 20px red, 0px 0px 30px red;
+  }
+} */
+.ImgsContainer {
+  position: absolute;
+  bottom: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.HerosecsubImga {
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: 1s;
+  rotate: -20deg;
+}
+.HerosecsubImga:hover {
+  transform: scale(1.05);
+}
+.HerosecsubImgb {
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.HerosecsubImgb:hover {
+  transform: scale(1.05);
+}
+.HerosecsubImgc {
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  margin-top: 40px;
+  cursor: pointer;
+  rotate: 20deg;
+  transition: 1s;
+}
+.HerosecsubImgc:hover {
+  transform: scale(1.05);
+}
+.Hubconx {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.CtaBut {
+  padding: 10px 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 1s;
+}
+.CtaBut:hover {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+.CtaButb {
+  padding: 10px 10px;
+  background-color: slateblue;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  transition: s;
+}
+.CtaButb:hover {
+  transform: translateY(-2px);
+  background-color: slateblue;
+}
+.IcoSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+.IcoBox {
+  position: relative;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  transition: 1s;
+  cursor: pointer;
+}
+.IcoBox:hover {
+  transform: translateY(-2px);
+}
+.IcoImg {
+  height: 105px;
+  width: 90px;
+}
+.FeatureProductSect {
+  position: relative;
+  padding: 20px;
+}
+.FeatureProductSect p {
+  width: 80%;
+}
+.FpContainer,
+.InwsContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: space-between;
+  gap: 10px;
+}
+.FpBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  transition: 1s;
+}
+.FpBox:hover {
+  transform: translateY(-4px);
+}
+.ProductImg {
+  height: 300px;
+  object-fit: contain;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: white;
+}
+.FpBod {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.FpBodySub {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.IndustriesweserveSection {
+  position: relative;
+  padding: 20px;
+}
+.IndustriesweserveSection p {
+  width: 80%;
+}
+.InwsBox {
+  position: relative;
+  padding: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.InwsImg {
+  height: 110px;
+}
+.InwsBox p {
+  text-align: center;
+}
+.qualitySection {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+.qualityBoxa {
+  position: relative;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.QualitycomplianceImg {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+.qualityBoxb {
+  position: relative;
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.qualityBox {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+.qualityminBox {
+  padding: 10px;
+  border-bottom: 2px solid slateblue;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  transition: 1s;
+  cursor: pointer;
+}
+.qualityminBox:hover {
+  border-bottom: 2px solid red;
+}
+@media (max-width: 1238px) {
+  .Herosubcona h1 {
+    font-size: 43px;
+  }
+  .QualitycomplianceImg {
+    height: 467px;
+  }
+  .HerosecsubImga,
+  .HerosecsubImgb,
+  .HerosecsubImgc {
+    height: 120px;
+    width: 120px;
+  }
+}
+@media (max-width: 950px) {
+  .qualitySection {
+    flex-direction: column;
+  }
+  .qualityBoxa,
+  .qualityBoxb {
+    width: 100%;
+  }
+  .QualitycomplianceImg {
+    height: 345px;
+    width: 100%;
+  }
+}
+@media (max-width: 872px) {
+  .Herosection {
+    flex-direction: column;
+  }
+  .Herosubcona,
+  .Herosubconb {
+    width: 100%;
+  }
+  .Herosubcona h1 {
+    text-align: center;
+  }
+  .Herosubcona p {
+    text-align: center;
+  }
+  .FeatureProductSect p {
+    width: 100%;
+  }
+  .IndustriesweserveSection p {
+    width: 100%;
+  }
+}
+@media (max-width: 559px) {
+  .Herosection {
+    padding-top: 80px;
+  }
+  .HerosecsubImga,
+  .HerosecsubImgb,
+  .HerosecsubImgc {
+    height: 120px;
+    width: 120px;
+  }
+  .HerosecImg {
+    width: 400px;
+  }
+  .Herosubcona h1 {
+    font-size: 22px;
+  }
+  .qualityBox {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 497px) {
+  .IcoBox {
+    width: 90%;
+  }
+}
+@media (max-width: 427px) {
+  .HerosecsubImga,
+  .HerosecsubImgb,
+  .HerosecsubImgc {
+    height: 100px;
+    width: 100px;
+  }
+  .HerosecImg {
+    width: 357px;
+  }
+}
+@media (max-width: 366px) {
+  .HerosecsubImga,
+  .HerosecsubImgb,
+  .HerosecsubImgc {
+    height: 90px;
+    width: 90px;
+  }
+  .HerosecImg {
+    width: 316px;
+  }
+  .Hubconx {
+    flex-direction: column;
+  }
+  .FpBodySub {
+    flex-direction: column;
+  }
+  .FpBox {
+    width: 95%;
+  }
+  .InwsBox {
+    width: 95%;
+  }
+  .FpContainer,
+  .InwsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  }
+}
+@media (max-width: 323px) {
+  .HerosecsubImga,
+  .HerosecsubImgb,
+  .HerosecsubImgc {
+    height: 70px;
+    width: 70px;
+  }
+  .HerosecImg {
+    width: 266px;
+  }
+}

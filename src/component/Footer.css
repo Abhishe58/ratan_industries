@@ -1,0 +1,57 @@
+footer {
+  position: relative;
+  padding: 10px;
+  background-color: slateblue;
+  color: white;
+  display: flex;
+  gap: 10px;
+}
+.fcontainer {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+.footercona {
+  position: relative;
+  width: 50%;
+}
+.footercona a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.footerconb {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footerconc {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.footerminconb {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footerLink {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+@media (max-width: 433px) {
+  footer {
+    flex-wrap: wrap;
+  }
+}
