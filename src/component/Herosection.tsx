@@ -18,6 +18,7 @@ import Qualitycompliance from "../assets/qualitycompliance.png";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Herosection() {
   const [himg, setHimg] = useState(Heroseca);
@@ -37,8 +38,16 @@ export default function Herosection() {
             large-scale production.
           </p>
           <div className="Hubconx">
-            <p className="CtaBut">Request a Quote</p>
-            <p className="CtaButb">Explore Products</p>
+            <p>
+              <Link to="/contactus" className="CtaBut">
+                Request a Quote
+              </Link>
+            </p>
+            <p>
+              <Link to="/products" className="CtaButb">
+                Explore Products
+              </Link>
+            </p>
           </div>
         </div>
         <div className="Herosubconb">
@@ -107,8 +116,16 @@ export default function Herosection() {
                 pharmacopeia standards.
               </p>
               <div className="FpBodySub">
-                <p className="CtaBut">Request Sample</p>
-                <p className="CtaButb">View Details</p>
+                <p>
+                  <Link to="/contactus" className="CtaBut">
+                    Request Sample
+                  </Link>
+                </p>
+                <p>
+                  <Link to="/products" className="CtaButb">
+                    View Details
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
@@ -121,8 +138,16 @@ export default function Herosection() {
                 processing.
               </p>
               <div className="FpBodySub">
-                <p className="CtaBut">Request Sample</p>
-                <p className="CtaButb">View Details</p>
+                <p>
+                  <Link to="/contactus" className="CtaBut">
+                    Request Sample
+                  </Link>
+                </p>
+                <p>
+                  <Link to="/products" className="CtaButb">
+                    View Details
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
@@ -136,8 +161,16 @@ export default function Herosection() {
                 manufacturing.
               </p>
               <div className="FpBodySub">
-                <p className="CtaBut">Request Sample</p>
-                <p className="CtaButb">View Details</p>
+                <p>
+                  <Link to="/contactus" className="CtaBut">
+                    Request Sample
+                  </Link>
+                </p>
+                <p>
+                  <Link to="/products" className="CtaButb">
+                    View Details
+                  </Link>
+                </p>
               </div>
             </div>
           </div>

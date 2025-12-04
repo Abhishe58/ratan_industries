@@ -1,0 +1,219 @@
+.Aboutherosection {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 10px;
+  padding-top: 60px;
+  display: flex;
+  gap: 10px;
+}
+.heroseccona {
+  position: relative;
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+.HeroImg {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.heroseccona h1 {
+  font-size: 50px;
+}
+.herosecconb {
+  position: relative;
+  padding: 10px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Hubconx {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.CtaBut {
+  padding: 10px 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 1s;
+}
+.CtaBut:hover {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+.CtaButb {
+  padding: 10px 10px;
+  background-color: slateblue;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  transition: 2s;
+}
+.CtaButb:hover {
+  transform: translateY(-2px);
+  background-color: slateblue;
+}
+.Storysectiton {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+}
+.storycona {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+.storyconb {
+  position: relative;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.storyImg {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.Ourjourysection {
+  position: relative;
+  padding: 20px;
+}
+.ourseccontainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.oursecbox {
+  position: relative;
+  padding: 10xp;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.squa {
+  color: slateblue;
+}
+.Visionsection {
+  position: relative;
+  padding: 20px;
+}
+.visoncont {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 10px;
+}
+.visonBox {
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  border-bottom: 2px solid #dfdfdf;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 1s;
+}
+.visonBox:hover {
+  border-bottom: 2px solid slateblue;
+}
+.visonBox h3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.Leadersection {
+  position: relative;
+  padding: 20px;
+}
+.LEadercontainer {
+  position: relative;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  cursor: pointer;
+}
+.LeaderImg {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+}
+.LEadercontainer h2 {
+  text-align: center;
+}
+.LEadercontainer p {
+  text-align: center;
+  padding: 5px;
+}
+.Exploreproductsection {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.Exploreproductsection h1 {
+  text-align: center;
+}
+.Exploreproductsection p {
+  text-align: center;
+}
+@media (max-width: 672px) {
+  .Aboutherosection {
+    flex-direction: column;
+  }
+  .heroseccona {
+    width: 100%;
+    align-items: center;
+  }
+  .heroseccona h1 {
+    text-align: center;
+  }
+  .heroseccona p {
+    text-align: center;
+  }
+  .Storysectiton {
+    flex-direction: column;
+  }
+  .storycona,
+  .storyconb {
+    width: 100%;
+  }
+}
+@media (max-width: 431px) {
+  .LEadercontainer {
+    width: 100%;
+  }
+}
+@media (max-width: 359px) {
+  .Aboutherosection {
+    padding-top: 75px;
+  }
+}

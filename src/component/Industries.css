@@ -1,0 +1,78 @@
+.IndustriesHeroSection {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 10px;
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(225, 225, 225, 0.3);
+  backdrop-filter: blur(8px);
+}
+.IndustriesHeroSection::before {
+  content: " ";
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background: linear-gradient(white, slateblue);
+}
+.IndustriesHeroSection h1 {
+  text-align: center;
+  color: white;
+}
+.IndustriesHeroSection p {
+  text-align: center;
+  color: white;
+}
+.Keyindustriessection {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.Keyindustriessection p {
+  text-align: center;
+}
+.industryapllContainer {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+.industryappBox {
+  position: relative;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+.industriesImg {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+}
+.industryDes {
+  position: relative;
+  padding: 10px;
+}
+.industryDes p {
+  text-align: left;
+}
+@media (max-width: 638px) {
+  .industryappBox {
+    width: 100%;
+  }
+  .industryapllContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

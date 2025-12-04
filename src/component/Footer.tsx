@@ -1,5 +1,6 @@
 import "./Footer.css";
 import { MdShareLocation } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="footercona">
           <h1>Ratan Industries</h1>
           <p>Chemical & Industrial Powders</p>
-          <a href="">
+          <a href="https://maps.app.goo.gl/zpBLSyWqMhU7RSLy7">
             <MdShareLocation style={{ fontSize: "20px" }} />
             60, Shubh Laxmi Estate, Dhanot, Kalol, Chhatral, Gandhinagar-382729,
             Gujarat, India
@@ -17,34 +18,42 @@ export default function Footer() {
         <div className="footerconc">
           <p>Quick Link</p>
           <div className="footerminconb">
-            <a href="" className="footerLink">
-              Home
-            </a>
-            <a href="" className="footerLink">
-              Product
-            </a>
-            <a href="" className="footerLink">
-              Industries
-            </a>
-            <a href="" className="footerLink">
-              About Us
-            </a>
-            <a href="" className="footerLink">
-              Blogs
-            </a>
-            <a href="" className="footerLink">
-              Contact Us
-            </a>
-            <a href="" className="footerLink">
-              Request a Quote
-            </a>
+            <p>
+              <Link to="/" className="footerLink">
+                Home
+              </Link>
+            </p>
+            <p>
+              <Link to="/products" className="footerLink">
+                Products
+              </Link>
+            </p>
+            <p>
+              <Link to="/industries" className="footerLink">
+                Industries
+              </Link>
+            </p>
+            <p>
+              <Link to="/about" className="footerLink">
+                About us
+              </Link>
+            </p>
+            <p>
+              <Link to="/contactus" className="footerLink">
+                Contact Us
+              </Link>
+            </p>
           </div>
         </div>
         <div className="footerconb">
           <p>Contact</p>
           <p className="footerLink">Dharmesh Mewada (CEO)</p>
-          <a className="footerLink">abc@gmail.com</a>
-          <a className="footerLink">+9100000000</a>
+          <a href="mailto:abc@gmail.com" className="footerLink">
+            abc@gmail.com
+          </a>
+          <a href="https://wa.me/+919173481721" className="footerLink">
+            +91 9173481721
+          </a>
         </div>
       </footer>
     </>
