@@ -20,6 +20,14 @@ import SodiumStarchGlycolatePowder from "../assets/SodiumStarchGlycolatePowder.p
 import { useState } from "react";
 import Footer from "./Footer";
 
+type Product = {
+  id: number;
+  name: string;
+  image: string;
+  price: string;
+  describe: { label: string; value: string }[];
+};
+
 export default function Products() {
   const products = [
     {
@@ -250,13 +258,12 @@ export default function Products() {
   ];
 
   const [query, setQuery] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [suggestions, setSuggestions] = useState<Product[]>([]);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
-
   // 📌 Live typing suggestion
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
 
@@ -277,7 +284,7 @@ export default function Products() {
   };
 
   // 📌 When user clicks on suggestion
-  const handleSuggestionClick = (product) => {
+  const handleSuggestionClick = (product: Product) => {
     setQuery(product.name);
     setFilteredProducts([product]);
     setShowSuggestions(false);
@@ -322,7 +329,7 @@ export default function Products() {
             <div className="searchBoxb">
               {showSuggestions && suggestions.length > 0 && (
                 <ul className="suggestionBox">
-                  {suggestions.map((product) => (
+                  {suggestions.map((product: Product) => (
                     <li
                       key={product.id}
                       className="suggestionItem"
@@ -341,7 +348,7 @@ export default function Products() {
             <div className="productContainerx">
               {filteredProducts.length > 0 ? (
                 <>
-                  {filteredProducts.map((item) => (
+                  {filteredProducts.map((item: Product) => (
                     <div className="productBox" key={item.id}>
                       <div className="productImg">
                         <img src={item.image} className="ProductImage" />
@@ -375,7 +382,7 @@ export default function Products() {
       </div>
       <h2 className="prodio">Products</h2>
       <div className="productContainer">
-        {products.map((item) => (
+        {products.map((item: Product) => (
           <div className="productBox">
             <div className="productImg">
               <img src={item.image} className="ProductImage" />
@@ -401,5 +408,3 @@ export default function Products() {
     </>
   );
 }
-
-// 8
