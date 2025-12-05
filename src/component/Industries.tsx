@@ -119,8 +119,8 @@ export default function Industries() {
   );
 }
 const styles = {
-  loadingcontainer: {
-    position: "fixed",
+   loadingcontainer: {
+    position: "fixed" as const, // tells TS this exact string is valid
     top: 0,
     left: 0,
     width: "100vw",
