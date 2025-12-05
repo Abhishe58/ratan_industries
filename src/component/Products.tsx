@@ -1,6 +1,7 @@
 import Nav from "./Nav";
 import "./Products.css";
 import { FaSearch } from "react-icons/fa";
+import { useEffect, useState } from "react";
 import WhiteLactosePowder from "../assets/WhiteLactosePowder.png";
 import LactoseMonohydratePowder from "../assets/LactoseMonohydratePowder.png";
 import CocoaPowder from "../assets/Cocoa Powder.png";
@@ -17,8 +18,9 @@ import MicrocrystallineCellulosePowder from "../assets/MicrocrystallineCellulose
 import CroscarmelloseSodium from "../assets/CroscarmelloseSodium.png";
 import XanthanGumPowder from "../assets/XanthanGumPowder.png";
 import SodiumStarchGlycolatePowder from "../assets/SodiumStarchGlycolatePowder.png";
-import { useState } from "react";
 import Footer from "./Footer";
+import Loading from "./Loading";
+import { Link } from "react-router-dom";
 
 type Product = {
   id: number;
@@ -29,6 +31,43 @@ type Product = {
 };
 
 export default function Products() {
+  const [isload, setIsload] = useState(true);
+
+  useEffect(() => {
+    const imageUrls = [
+      WhiteLactosePowder,
+      LactoseMonohydratePowder,
+      CocoaPowder,
+      sls,
+      galatin,
+      cellulose,
+      PolyanionicCellulosePolymer,
+      TitaniumDioxidePowder,
+      WheyProteinPowder,
+      WireDrawingPowder,
+      CarboxymethylCellulosePowder,
+      MagnesiumStearatePowder,
+      MicrocrystallineCellulosePowder,
+      CroscarmelloseSodium,
+      XanthanGumPowder,
+      SodiumStarchGlycolatePowder,
+    ];
+
+    let loadedCount = 0;
+    const totalImages = imageUrls.length;
+
+    imageUrls.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+
+      img.onload = () => {
+        loadedCount += 1;
+        if (loadedCount === totalImages) {
+          setIsload(false);
+        }
+      };
+    });
+  }, []);
   const products = [
     {
       id: 1,
@@ -304,107 +343,136 @@ export default function Products() {
 
   return (
     <>
-      <Nav />
-      <div className="ProductHerosection">
-        <div className="heroconxa">
-          <h1>High-Performance Chemical Solutions</h1>
-          <p>
-            Engineered for reliability, purity, and industry-grade performance.
-          </p>
-          <div className="searchContainer">
-            <div className="searchBoxa">
-              <input
-                type="text"
-                placeholder="Search products..."
-                className="productInput"
-                value={query}
-                onChange={handleInputChange}
-                onFocus={() => setShowSuggestions(true)}
-              />
-
-              <button className="SearchBut" onClick={handleSearchClick}>
-                <FaSearch className="Searchcon" />
-              </button>
-            </div>
-            <div className="searchBoxb">
-              {showSuggestions && suggestions.length > 0 && (
-                <ul className="suggestionBox">
-                  {suggestions.map((product: Product) => (
-                    <li
-                      key={product.id}
-                      className="suggestionItem"
-                      onClick={() => handleSuggestionClick(product)}
-                    >
-                      {product.name}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </div>
+      {isload && (
+        <div style={styles.loadingcontainer}>
+          <Loading />
         </div>
-        {hasSearched && (
-          <>
-            <div className="productContainerx">
-              {filteredProducts.length > 0 ? (
-                <>
-                  {filteredProducts.map((item: Product) => (
-                    <div className="productBox" key={item.id}>
-                      <div className="productImg">
-                        <img src={item.image} className="ProductImage" />
-                      </div>
+      )}
 
-                      <div className="prductBody">
-                        <h1>{item.name}</h1>
-                        <p className="productPrice">₹ {item.price}</p>
+      {!isload && (
+        <>
+          <Nav />
+          <div className="ProductHerosection">
+            <div className="heroconxa">
+              <h1>High-Performance Chemical Solutions</h1>
+              <p>
+                Engineered for reliability, purity, and industry-grade
+                performance.
+              </p>
+              <div className="searchContainer">
+                <div className="searchBoxa">
+                  <input
+                    type="text"
+                    placeholder="Search products..."
+                    className="productInput"
+                    value={query}
+                    onChange={handleInputChange}
+                    onFocus={() => setShowSuggestions(true)}
+                  />
 
-                        <div className="productDetail">
-                          {item.describe.map((desc, index) => (
-                            <p key={index}>
-                              {desc.label}: {desc.value}
-                            </p>
-                          ))}
-                        </div>
-
-                        <a href="" className="InquiryButton">
-                          Inquiry Now
-                        </a>
-                      </div>
-                    </div>
-                  ))}
-                </>
-              ) : (
-                <p>No products found</p>
-              )}
-            </div>
-          </>
-        )}
-      </div>
-      <h2 className="prodio">Products</h2>
-      <div className="productContainer">
-        {products.map((item: Product) => (
-          <div className="productBox">
-            <div className="productImg">
-              <img src={item.image} className="ProductImage" />
-            </div>
-            <div className="prductBody">
-              <h1>{item.name}</h1>
-              <p className="productPrice">₹ {item.price}</p>
-              <div className="productDetail">
-                {item.describe.map((desc, index) => (
-                  <p key={index}>
-                    {desc.label}: {desc.value}
-                  </p>
-                ))}
+                  <button className="SearchBut" onClick={handleSearchClick}>
+                    <FaSearch className="Searchcon" />
+                  </button>
+                </div>
+                <div className="searchBoxb">
+                  {showSuggestions && suggestions.length > 0 && (
+                    <ul className="suggestionBox">
+                      {suggestions.map((product: Product) => (
+                        <li
+                          key={product.id}
+                          className="suggestionItem"
+                          onClick={() => handleSuggestionClick(product)}
+                        >
+                          {product.name}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
-              <a href="" className="InquiryButton">
-                Inquiry Now
-              </a>
             </div>
+            {hasSearched && (
+              <>
+                <div className="productContainerx">
+                  {filteredProducts.length > 0 ? (
+                    <>
+                      {filteredProducts.map((item: Product) => (
+                        <div className="productBox" key={item.id}>
+                          <div className="productImg">
+                            <img src={item.image} className="ProductImage" />
+                          </div>
+
+                          <div className="prductBody">
+                            <h1>{item.name}</h1>
+                            <p className="productPrice">₹ {item.price}</p>
+
+                            <div className="productDetail">
+                              {item.describe.map((desc, index) => (
+                                <p key={index}>
+                                  {desc.label}: {desc.value}
+                                </p>
+                              ))}
+                            </div>
+
+                            <a>
+                              <Link to="/contactus" className="InquiryButton">
+                                Inquiry Now
+                              </Link>
+                            </a>
+                          </div>
+                        </div>
+                      ))}
+                    </>
+                  ) : (
+                    <p>No products found</p>
+                  )}
+                </div>
+              </>
+            )}
           </div>
-        ))}
-      </div>
-      <Footer />
+          <h2 className="prodio">Products</h2>
+          <div className="productContainer">
+            {products.map((item: Product) => (
+              <div className="productBox">
+                <div className="productImg">
+                  <img src={item.image} className="ProductImage" />
+                </div>
+                <div className="prductBody">
+                  <h1>{item.name}</h1>
+                  <p className="productPrice">₹ {item.price}</p>
+                  <div className="productDetail">
+                    {item.describe.map((desc, index) => (
+                      <p key={index}>
+                        {desc.label}: {desc.value}
+                      </p>
+                    ))}
+                  </div>
+                  <a>
+                    <Link to="/contactus" className="InquiryButton">
+                      Inquiry Now
+                    </Link>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+          <Footer />
+        </>
+      )}
     </>
   );
 }
+const styles = {
+  loadingcontainer: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100vw",
+    height: "100vh",
+    background: "#fff",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: 9999,
+  },
+};
