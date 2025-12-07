@@ -20,6 +20,7 @@ import Footer from "./Footer";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
+import { FiSlack } from "react-icons/fi";
 
 export default function Herosection() {
   const [himg, setHimg] = useState(Heroseca);
@@ -163,6 +164,89 @@ export default function Herosection() {
               />
 
               <p>Fast Global Delivery</p>
+            </div>
+          </div>
+          <div className="scrollContainerxyz">
+            <div className="scrollCotainer">
+              <p className="scrollP">Cellullose</p>
+              <p>
+                <p className="xc">
+                  <FiSlack className="scrollIco" />
+                </p>
+              </p>
+              <p className="scrollP">Lactose</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Manufacturing</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Pharmaceutical</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Formulations</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Chemicals</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Purity</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Trusted</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Testing</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Quality</p>
+
+              <p className="scrollP">Cellullose</p>
+              <p>
+                <p className="xc">
+                  <FiSlack className="scrollIco" />
+                </p>
+              </p>
+              <p className="scrollP">Lactose</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Manufacturing</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Pharmaceutical</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Formulations</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Chemicals</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Purity</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Trusted</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Testing</p>
+              <p className="xc">
+                <FiSlack className="scrollIco" />
+              </p>
+              <p className="scrollP">Quality</p>
             </div>
           </div>
           <div className="FeatureProductSect">

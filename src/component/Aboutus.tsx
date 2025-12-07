@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
+import Logo from "../assets/logo.png";
 
 export default function Aboutus() {
   const [isload, setIsload] = useState(true);
@@ -179,7 +180,7 @@ export default function Aboutus() {
               improvement.
             </p>
             <div className="LEadercontainer">
-              <img src={krishna} alt="" className="LeaderImg" />
+              <img src={Logo} alt="" className="LeaderImg" />
               <h2>Dharmash Mevada — CEO</h2>
               <p>
                 Experienced in chemical manufacturing, quality assurance, and

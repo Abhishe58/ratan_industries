@@ -80,6 +80,19 @@
   flex-direction: column;
   gap: 10px;
   width: 50%;
+  animation: hro linear;
+  animation-range: entry 0 cover 30%;
+  animation-timeline: view();
+}
+@keyframes hro {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .storyconb {
   position: relative;
@@ -87,6 +100,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: hro linear;
+  animation-range: entry 0 cover 30%;
+  animation-timeline: view();
+}
+@keyframes hro {
+  0% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .storyImg {
   height: 300px;
@@ -111,6 +137,19 @@
   display: flex;
   gap: 10px;
   align-items: center;
+  animation: hrob linear;
+  animation-range: entry 0 cover 30%;
+  animation-timeline: view();
+}
+@keyframes hrob {
+  0% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .squa {
   color: slateblue;
@@ -136,6 +175,19 @@
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: 1s;
+  animation: hro linear;
+  animation-range: entry 0 cover 30%;
+  animation-timeline: view();
+}
+@keyframes hro {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .visonBox:hover {
   border-bottom: 2px solid slateblue;
@@ -157,6 +209,19 @@
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   margin-top: 10px;
   cursor: pointer;
+  animation: hro linear;
+  animation-range: entry 0 cover 30%;
+  animation-timeline: view();
+}
+@keyframes hro {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .LeaderImg {
   height: 300px;

@@ -117,8 +117,20 @@ li:hover {
   border-radius: 10px;
   transition: 1s;
   break-inside: avoid;
+  animation: pro linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
 }
-
+@keyframes pro {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .productBox,
 .productBox > * {
   height: auto !important;
