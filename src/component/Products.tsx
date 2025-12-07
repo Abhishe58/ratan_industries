@@ -429,7 +429,10 @@ export default function Products() {
                 </div>
               </>
             )}
+<<<<<<< HEAD
             
+=======
+>>>>>>> fc83f114e447d3d2093ea4aa8bb3d2c1b4303d7d
           </div>
           <h2 className="prodio">Products</h2>
           <div className="productContainer">
@@ -464,8 +467,13 @@ export default function Products() {
   );
 }
 const styles = {
+<<<<<<< HEAD
   loadingcontainer: {
     position: "fixed",
+=======
+   loadingcontainer: {
+    position: "fixed" as const, // tells TS this exact string is valid
+>>>>>>> fc83f114e447d3d2093ea4aa8bb3d2c1b4303d7d
     top: 0,
     left: 0,
     width: "100vw",
