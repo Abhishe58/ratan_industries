@@ -12,10 +12,6 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
 import Logo from "../assets/logo.png";
-<<<<<<< HEAD
-=======
-
->>>>>>> fc83f114e447d3d2093ea4aa8bb3d2c1b4303d7d
 
 export default function Aboutus() {
   const [isload, setIsload] = useState(true);
@@ -218,13 +214,8 @@ export default function Aboutus() {
   );
 }
 const styles = {
-<<<<<<< HEAD
   loadingcontainer: {
-    position: "fixed",
-=======
-   loadingcontainer: {
-    position: "fixed" as const, // tells TS this exact string is valid
->>>>>>> fc83f114e447d3d2093ea4aa8bb3d2c1b4303d7d
+    position: "fixed" as const,
     top: 0,
     left: 0,
     width: "100vw",
