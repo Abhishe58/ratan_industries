@@ -20,6 +20,7 @@ import XanthanGumPowder from "../assets/XanthanGumPowder.png";
 import SodiumStarchGlycolatePowder from "../assets/SodiumStarchGlycolatePowder.png";
 import Footer from "./Footer";
 import Loading from "./Loading";
+import { Link } from "react-router-dom";
 
 type Product = {
   id: number;
@@ -413,8 +414,10 @@ export default function Products() {
                               ))}
                             </div>
 
-                            <a href="" className="InquiryButton">
-                              Inquiry Now
+                            <a>
+                              <Link to="/contactus" className="InquiryButton">
+                                Inquiry Now
+                              </Link>
                             </a>
                           </div>
                         </div>
@@ -444,8 +447,10 @@ export default function Products() {
                       </p>
                     ))}
                   </div>
-                  <a href="" className="InquiryButton">
-                    Inquiry Now
+                  <a>
+                    <Link to="/contactus" className="InquiryButton">
+                      Inquiry Now
+                    </Link>
                   </a>
                 </div>
               </div>
