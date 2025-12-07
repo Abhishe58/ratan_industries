@@ -20,10 +20,7 @@ import Footer from "./Footer";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
-<<<<<<< HEAD
 import { FiSlack } from "react-icons/fi";
-=======
->>>>>>> fc83f114e447d3d2093ea4aa8bb3d2c1b4303d7d
 
 export default function Herosection() {
   const [himg, setHimg] = useState(Heroseca);
@@ -169,7 +166,6 @@ export default function Herosection() {
               <p>Fast Global Delivery</p>
             </div>
           </div>
-<<<<<<< HEAD
           <div className="scrollContainerxyz">
             <div className="scrollCotainer">
               <p className="scrollP">Cellullose</p>
@@ -253,8 +249,6 @@ export default function Herosection() {
               <p className="scrollP">Quality</p>
             </div>
           </div>
-=======
->>>>>>> fc83f114e447d3d2093ea4aa8bb3d2c1b4303d7d
           <div className="FeatureProductSect">
             <h1>Featured Products</h1>
             <p>
@@ -413,13 +407,10 @@ export default function Herosection() {
 }
 
 const styles = {
-<<<<<<< HEAD
   loadingcontainer: {
     position: "fixed",
-=======
    loadingcontainer: {
     position: "fixed" as const, // tells TS this exact string is valid
->>>>>>> fc83f114e447d3d2093ea4aa8bb3d2c1b4303d7d
     top: 0,
     left: 0,
     width: "100vw",
