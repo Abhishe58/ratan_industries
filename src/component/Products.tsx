@@ -18,6 +18,11 @@ import MicrocrystallineCellulosePowder from "../assets/MicrocrystallineCellulose
 import CroscarmelloseSodium from "../assets/CroscarmelloseSodium.png";
 import XanthanGumPowder from "../assets/XanthanGumPowder.png";
 import SodiumStarchGlycolatePowder from "../assets/SodiumStarchGlycolatePowder.png";
+import researchfeasibility from "../assets/researchfeasibility.png";
+import formulation from "../assets/formulation.png";
+import testing from "../assets/testing.png";
+import process from "../assets/process.png";
+import manufacturing from "../assets/manufacturing.png";
 import Footer from "./Footer";
 import Loading from "./Loading";
 import { Link } from "react-router-dom";
@@ -390,6 +395,49 @@ export default function Products() {
                   )}
                 </div>
               </div>
+              <div className="vboxa">
+                <h1>From Innovation to Manufacturing</h1>
+                <p>
+                  The journey of creating reliable, industry-grade materials.
+                </p>
+              </div>
+              <div className="desContainera">
+                <div className="desBox" id="desBoxa">
+                  <img
+                    src={researchfeasibility}
+                    alt="research and feasibility"
+                    className="desImg"
+                  />
+                </div>
+                <div className="desBox" id="desBoxb">
+                  <img
+                    src={formulation}
+                    alt="research and feasibility"
+                    className="desImg"
+                  />
+                </div>
+                <div className="desBox" id="desBoxc">
+                  <img
+                    src={testing}
+                    alt="research and feasibility"
+                    className="desImg"
+                  />
+                </div>
+                <div className="desBox" id="desBoxd">
+                  <img
+                    src={process}
+                    alt="research and feasibility"
+                    className="desImg"
+                  />
+                </div>
+                <div className="desBox" id="desBoxe">
+                  <img
+                    src={manufacturing}
+                    alt="research and feasibility"
+                    className="desImg"
+                  />
+                </div>
+              </div>
             </div>
             {hasSearched && (
               <>
@@ -429,6 +477,47 @@ export default function Products() {
                 </div>
               </>
             )}
+            <div className="vboxb">
+              <h1>From Innovation to Manufacturing</h1>
+              <p>The journey of creating reliable, industry-grade materials.</p>
+            </div>
+            <div className="desContainerb">
+              <div className="desBox" id="desBoxa">
+                <img
+                  src={researchfeasibility}
+                  alt="research and feasibility"
+                  className="desImg"
+                />
+              </div>
+              <div className="desBox" id="desBoxb">
+                <img
+                  src={formulation}
+                  alt="research and feasibility"
+                  className="desImg"
+                />
+              </div>
+              <div className="desBox" id="desBoxc">
+                <img
+                  src={testing}
+                  alt="research and feasibility"
+                  className="desImg"
+                />
+              </div>
+              <div className="desBox" id="desBoxd">
+                <img
+                  src={process}
+                  alt="research and feasibility"
+                  className="desImg"
+                />
+              </div>
+              <div className="desBox" id="desBoxe">
+                <img
+                  src={manufacturing}
+                  alt="research and feasibility"
+                  className="desImg"
+                />
+              </div>
+            </div>
           </div>
           <h2 className="prodio">Products</h2>
           <div className="productContainer">

@@ -1,8 +1,9 @@
 import Nav from "./Nav";
 import "./Contactus.css";
 import Footer from "./Footer";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Loading from "./Loading";
+import emailjs from "emailjs-com";
 
 export default function Contactus() {
   const [isload, setIsload] = useState(true);
@@ -15,6 +16,32 @@ export default function Contactus() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_qg0eiyo",
+        "template_2h0kvrg",
+        form.current,
+        "neIh2Mt_gfywarO83"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Something went wrong!");
+        }
+      );
+
+    e.target.reset();
+  };
   return (
     <>
       {isload && (
@@ -50,26 +77,34 @@ export default function Contactus() {
               </a>
             </div>
             <div className="contactusconb">
-              <div className="formContainer">
-                <input type="text" placeholder="Name" className="inputField" />
+              <form ref={form} onSubmit={sendEmail} className="formContainer">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="inputField"
+                  name="user_name"
+                />
                 <input
                   type="email"
                   placeholder="Email"
                   className="inputField"
+                  name="user_email"
                 />
                 <input
                   type="number"
                   placeholder="Phone Number"
                   className="inputField"
+                  name="user_phonenumber"
                 />
                 <textarea
-                  name=""
-                  id=""
                   placeholder="Message.."
                   className="textDescribe"
+                  name="user_message"
                 ></textarea>
-                <button className="SendBut">Send</button>
-              </div>
+                <button className="SendBut" type="submit">
+                  Send
+                </button>
+              </form>
             </div>
           </div>
           <Footer />
