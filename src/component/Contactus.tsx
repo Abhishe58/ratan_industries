@@ -17,10 +17,13 @@ export default function Contactus() {
     return () => clearTimeout(timer);
   }, []);
 
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e) => {
+  // FIX: Type-safe event
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!form.current) return;
 
     emailjs
       .sendForm(
@@ -40,7 +43,7 @@ export default function Contactus() {
         }
       );
 
-    e.target.reset();
+    form.current.reset();
   };
   return (
     <>
